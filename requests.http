@@ -1,0 +1,64 @@
+# curl --location --request POST 'http://localhost:8080/employees' --header 'Content-Type: application/json'
+#--data-raw '{
+#    "userName":"john.doe",
+#    "firstName":"John",
+#    "lastName":"Doe",
+#    "emailId":"john.doe@gmail.com",
+#    "dayOfBirth":"1997-12-03"
+#}'
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "userName": "john.doe",
+  "firstName": "John",
+  "lastName": "Doe",
+  "emailAddress": "john.doe@gmail.com",
+  "dayOfBirth": "1997-12-03"
+}
+
+###
+
+# curl --location --request GET 'http://localhost:8080/employees' --header 'Content-Type: application/json'
+GET http://localhost:8080/employees
+Content-Type: application/json
+
+###
+
+# curl --location --request GET 'http://localhost:8080/employees/1' --header 'Content-Type: application/json'
+GET http://localhost:8080/employees/1
+Content-Type: application/json
+
+###
+
+# curl --location --request PUT 'http://localhost:8080/employees/1' --header 'Content-Type: application/json'
+#--data-raw '{
+#    "id": 1,
+#    "userName": "john.doe",
+#    "firstName": "John",
+#    "middleName": "Thomas",
+#    "lastName": "Doe",
+#    "emailId": "john.doe7@gmail.com",
+#    "dayOfBirth": "1997-12-03"
+#}'
+PUT http://localhost:8080/employees/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "userName": "john.doe",
+  "firstName": "John",
+  "middleName": "Thomas",
+  "lastName": "Doe",
+  "emailAddress": "john.doe7@gmail.com",
+  "dayOfBirth": "1997-12-03"
+}
+
+###
+
+# curl --location --request DELETE 'http://localhost:8080/employees/1' --header 'Content-Type: application/json'
+DELETE http://localhost:8080/employees/1
+Content-Type: application/json
+
+###
+
